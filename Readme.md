@@ -73,7 +73,6 @@ ___
 ### Meme Generator
 
 ## How to run
-___
 ### CLI
 ```bash
 $ python meme.py --help
