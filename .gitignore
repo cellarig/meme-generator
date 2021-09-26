@@ -6,3 +6,7 @@ __pycache__/
 # virtualenv
 venv/
 ENV/
+
+# output path
+static/
+tmp/
