@@ -88,5 +88,5 @@ optional arguments:
 ```bash
 $ export FLASK_APP=app
 $ export FLASK_ENV=development
-$ python flask run
+$ flask run
 ```
