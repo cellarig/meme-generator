@@ -3,8 +3,6 @@ This project showcases building a multimedia application for generating meme.
 Consuming existing python libraries, sub processing non python application and package it as cli tool and web service.
 ## Project Structure
 ``` 
-    requirements.txt
-    │
     Readme.md
     │
     src
@@ -45,6 +43,7 @@ Consuming existing python libraries, sub processing non python application and p
     │   ├── quote_model.py
     │   └── txt_ingestor.py
     │
+    ├── requirements.txt
     ├── static
     ├── temp
     └── templates
