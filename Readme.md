@@ -1,7 +1,6 @@
 # Meme generator
 This project showcases building a multimedia application for generating meme. 
-Consuming existing python libraries, sub processing non python application and package it as cli tool and web service.  
-___
+Consuming existing python libraries, sub processing non python application and package it as cli tool and web service.
 ## Project Structure
 ``` 
     fonts
@@ -55,7 +54,6 @@ ___
 ```
 
 ## Requirements
-___
 ### Python 3.6
 ```bash
 $ python3 --version
@@ -68,7 +66,6 @@ $ pip install requirements.txt
 
 
 ## Modules
-___
 ### Quote Engine
 ### Meme Generator
 
