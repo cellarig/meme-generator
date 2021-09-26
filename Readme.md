@@ -3,16 +3,15 @@ This project showcases building a multimedia application for generating meme.
 Consuming existing python libraries, sub processing non python application and package it as cli tool and web service.
 ## Project Structure
 ``` 
-    fonts
-    ├── RobotoMono-Italic.ttf
-    ├── RobotoMono-Regular.ttf
-    │
     requirements.txt
     │
     Readme.md
     │
     src
     ├── app.py
+    ├──fonts
+    │  ├── RobotoMono-Italic.ttf
+    │  └── RobotoMono-Regular.ttf
     ├── _data
     │   ├── DogQuotes
     │   │   ├── DogQuotesCSV.csv
@@ -46,7 +45,8 @@ Consuming existing python libraries, sub processing non python application and p
     │   ├── quote_model.py
     │   └── txt_ingestor.py
     │
-    ├── requirement.txt
+    ├── static
+    ├── temp
     └── templates
         ├── base.html
         ├── meme_form.html
