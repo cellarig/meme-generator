@@ -1,6 +1,7 @@
-# Meme generator
+# Meme Generator
 This project showcases building a multimedia application for generating meme. 
 Consuming existing python libraries, sub processing non python application and package it as cli tool and web service.
+
 ## Project Structure
 ``` 
     Readme.md
@@ -58,15 +59,43 @@ Consuming existing python libraries, sub processing non python application and p
 $ python3 --version
 Python 3.6.10
 
-$ pip install requirements.txt
+$ pip3 install requirements.txt
 ```
 ### pdftotext
 [pdftotext](https://www.xpdfreader.com/pdftotext-man.html) CLI utility
 
-
 ## Modules
 ### Quote Engine
+The module is responsible to load and parse quotes from files. Utilizing object-oriented principles, it provides the functionality for ingesting quote from different kinds of file formats (*csv*, *docx*, *pdf*, *txt*).
+#### Classes
+ * ```QuoteModel```: a quote representation which consists of a body and its author
+ * ```IngestorInterface```: interface that define strategy pattern for quote ```Ingestor```.
+ * ```CSVIngestor```: ingestor for csv format
+ * ```DocxIngestor```: ingestor for docx format
+ * ```PDFIngestor```: ingestor for pdf format
+ * ```TextIngestor```: ingestor for txt format
+ * ```Ingestor```: ingestor that can read supported file formats
+#### Dependencies
+ ```
+pandas==1.1.5
+python-docx==0.8.11
+pdftotext version 0.86.1
+```
 ### Meme Generator
+The module is responsible for manipulating and drawing text onto images. Consuming advanced third party library to handle the image manipulation.
+#### Classes
+* ```MemeGenerator```: handles image manipulation, text drawing and output the generated image file
+#### Dependencies
+ ```
+Pillow==8.3.2
+```
+### Application Starter
+* ```meme.py```: provides the cli tool for meme generator
+* ```app.py```: provides a flask app, to run meme generator in a browser
+#### Dependencies
+ ```
+Flask==2.0.1
+```
 
 ## How to run
 ### CLI
