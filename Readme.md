@@ -1,7 +1,7 @@
 # Meme Generator
 This project showcases building a multimedia application for generating meme. 
 Consuming existing python libraries, sub processing non python application and package it as cli tool and web service.
-
+![meme_exmaple](src/static/meme_downloaded.jpg)
 ## Project Structure
 ``` 
     Readme.md
