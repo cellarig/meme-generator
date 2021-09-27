@@ -28,8 +28,8 @@ class MemeGenerator:
             draw = ImageDraw.Draw(im)
             position = self.generate_text_position(width, height)
             text_author = f'\n\n- {author}'
-            body_font = ImageFont.truetype('./fonts/RobotoMono-Regular.ttf', size=24)
-            author_font = ImageFont.truetype('./fonts/RobotoMono-Italic.ttf', size=12)
+            body_font = ImageFont.truetype('./fonts/RobotoMono-Regular.ttf', size=16)
+            author_font = ImageFont.truetype('./fonts/RobotoMono-Italic.ttf', size=14)
             draw.text(position, text, font=body_font, fill='black', stroke_width=1, stroke_fill='white')
             draw.text(position, text_author, font=author_font, fill='black')
 
@@ -47,6 +47,6 @@ class MemeGenerator:
 
     @staticmethod
     def generate_text_position(width, height) -> tuple:
-        position: Tuple[int, int] = (random.randint(5, int(width * 0.4)),
-                                     random.randint(5, int(height * 0.8)))
+        position: Tuple[int, int] = (random.randint(4, int(width * 0.2)),
+                                     random.randint(4, int(height * 0.8)))
         return position
