@@ -13,7 +13,7 @@ author_font_path = './fonts/RobotoMono-Italic.ttf'
 
 
 def draw_word_wrap(draw, text, position, max_width,
-                   font=ImageFont.truetype(font_path, 22),
+                   font=ImageFont.truetype(text_font_path, 22),
                    fill='black') -> int:
     """Draw the given ``text`` to the x and y position of the image.
 
