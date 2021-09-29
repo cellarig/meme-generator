@@ -57,6 +57,9 @@ def meme_post():
     quote_body = request.form.get('body')
     quote_author = request.form.get('author')
 
+    if len(image_url) == 0:
+        return render_template('error.html')
+
     if quote_body == '' or quote_author == '':
         quote = random.choice(quotes)
     else:
