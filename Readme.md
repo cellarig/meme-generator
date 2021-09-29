@@ -46,7 +46,7 @@ Consuming existing python libraries, sub processing non python application and p
     │
     ├── requirements.txt
     ├── static
-    ├── temp
+    ├── tmp
     └── templates
         ├── base.html
         ├── error.html
