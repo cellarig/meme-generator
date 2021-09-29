@@ -1,3 +1,4 @@
+"""Implementation for docx file format using python-docx."""
 from typing import List
 from docx import Document
 
@@ -6,14 +7,16 @@ from .quote_model import QuoteModel
 
 
 class DocxIngestor(IngestorInterface):
-    """An ingestor that processes docx format
+    """An ingestor that processes docx format.
 
-    passing other extension will raise UnsupportedExtensionError
+    Passing other extension will raise UnsupportedExtensionError
     """
+
     supported_extensions = ['docx']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parse qoutes from docx file with specified path."""
         if not cls.can_ingest(path):
             raise UnsupportedExtensionError('Cannot ingest this extension')
 
@@ -27,5 +30,3 @@ class DocxIngestor(IngestorInterface):
                 quotes.append(quote)
 
         return quotes
-
-

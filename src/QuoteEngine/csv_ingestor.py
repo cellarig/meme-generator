@@ -1,3 +1,4 @@
+"""Implementation for csv file format using pandas."""
 import pandas as pd
 from typing import List
 
@@ -6,14 +7,16 @@ from .quote_model import QuoteModel
 
 
 class CSVIngestor(IngestorInterface):
-    """An ingestor that processes csv format
+    """An ingestor that processes csv format.
 
-    passing other extension will raise UnsupportedExtensionError
+    Passing other extension will raise UnsupportedExtensionError
     """
+
     supported_extensions = ['csv']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parse qoutes from csv file with specified path."""
         if not cls.can_ingest(path):
             raise UnsupportedExtensionError('Cannot ingest this extension')
 

@@ -1,3 +1,4 @@
+"""Implementation for pdf file format by creating pdftotext subprocess."""
 import os
 import random
 import subprocess
@@ -8,14 +9,16 @@ from .quote_model import QuoteModel
 
 
 class PDFIngestor(IngestorInterface):
-    """An ingestor that processes pdf format
+    """An ingestor that processes pdf format.
 
-    passing other extension will raise UnsupportedExtensionError
+    Passing other extension will raise UnsupportedExtensionError
     """
+
     supported_extensions = ['pdf']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parse qoutes from pdf file with specified path."""
         if not cls.can_ingest(path):
             raise UnsupportedExtensionError('Cannot ingest this extension')
 

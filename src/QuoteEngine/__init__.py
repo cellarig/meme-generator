@@ -1,3 +1,4 @@
+"""All components that is required for this module."""
 from .csv_ingestor import CSVIngestor
 from .docx_ingestor import DocxIngestor
 from .pdf_ingestor import PDFIngestor

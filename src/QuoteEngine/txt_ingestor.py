@@ -1,3 +1,4 @@
+"""Implementation for txt file format."""
 from typing import List
 
 from .ingestor_interface import IngestorInterface, UnsupportedExtensionError
@@ -5,14 +6,16 @@ from .quote_model import QuoteModel
 
 
 class TextIngestor(IngestorInterface):
-    """An ingestor that processes txt format
+    """An ingestor that processes txt format.
 
-        passing other extension will raise UnsupportedExtensionError
-        """
+    Passing other extension will raise UnsupportedExtensionError
+    """
+
     supported_extensions = ['txt']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parse qoutes from txt file with specified path."""
         if not cls.can_ingest(path):
             raise UnsupportedExtensionError('Cannot ingest this extension')
 
