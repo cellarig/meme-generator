@@ -49,6 +49,7 @@ Consuming existing python libraries, sub processing non python application and p
     ├── temp
     └── templates
         ├── base.html
+        ├── error.html
         ├── meme_form.html
         └── meme.html
 ```
